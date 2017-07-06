@@ -33,4 +33,4 @@ function checkNavBar(){
 	}
 }
 
-window.addEventListener('scroll', checkNavBar);
+// window.addEventListener('scroll', checkNavBar);
