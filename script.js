@@ -19,7 +19,7 @@ VIDEO.addEventListener('ended', function(){
 	}, 1500);
 });
 
-VIDEO.addEventListener('canplaythrough', function(){
+VIDEO.addEventListener('canplay', function(){
 	var loading = document.getElementById('loading');
 	loading.classList.add('hide');
 	VIDEO.play();
