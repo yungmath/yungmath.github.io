@@ -22,6 +22,7 @@ VIDEO.addEventListener('ended', function(){
 VIDEO.addEventListener('canplaythrough', function(){
 	var loading = document.getElementById('loading');
 	loading.classList.add('hide');
+	VIDEO.play();
 });
 
 var bar = document.getElementsByClassName('navBar')[0];
