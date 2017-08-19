@@ -19,6 +19,11 @@ VIDEO.addEventListener('ended', function(){
 	}, 1500);
 });
 
+VIDEO.addEventListener('canplaythrough', function(){
+	var loading = document.getElementById('loading');
+	loading.classList.add('hide');
+});
+
 var bar = document.getElementsByClassName('navBar')[0];
 function checkNavBar(){
 	var scrollTop = Number(document.body.scrollTop);
