@@ -135,14 +135,17 @@ var imgAddresses = [
 
 ];
 
-var images = document.getElementsByTagName('img');
+var spans = document.getElementsByTagName('span');
 var counter = 0;
 function loadImage(counter) {
   //Break out if no more images
   if(counter==imgAddresses.length) { return; }
 
   //Grab an image obj
-  var I = images[counter];
+  var span = spans[counter];
+  var I = document.createElement('img');
+
+  span.appendChild(I);
 
   //Monitor load or error events, moving on to next image in either case
   I.onload = I.onerror = function() { loadImage(counter+1); }
@@ -150,3 +153,4 @@ function loadImage(counter) {
   //Change source (then wait for event)
   I.src = imgAddresses[counter];
 }
+
