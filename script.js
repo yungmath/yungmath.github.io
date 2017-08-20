@@ -19,24 +19,134 @@ VIDEO.addEventListener('ended', function(){
 	}, 1500);
 });
 
-VIDEO.addEventListener('canplay', function(){
+VIDEO.addEventListener('canplaythrough', function(){
+	loadImage(0);
 	var loading = document.getElementById('loading');
 	loading.classList.add('hide');
 	VIDEO.play();
 });
 
-var bar = document.getElementsByClassName('navBar')[0];
-function checkNavBar(){
-	var scrollTop = Number(document.body.scrollTop);
-	var scrollTotal = Number(document.body.scrollHeight)-Number(window.innerHeight);
-	if(scrollTop < 50){
-		bar.classList.add('hidden');
-		bar.classList.remove('show');
-	}
-	else{
-		bar.classList.add('show');
-		bar.classList.remove('hidden');
-	}
-}
+/*LOAD IMAGES*/
 
-// window.addEventListener('scroll', checkNavBar);
+var imgAddresses = [
+
+"assets/3covers/3.png",
+"assets/3covers/2.png",
+"assets/3covers/1.png",
+"assets/CARTIUZIPABLO/3.png",
+"assets/CARTIUZIPABLO/2.png",
+"assets/CARTIUZIPABLO/1.png",
+"assets/collage/3.png",
+"assets/collage/2.png",
+"assets/collage/1.png",
+"assets/dntracysmooky/3.png",
+"assets/dntracysmooky/2.png",
+"assets/dntracysmooky/1.png",
+"assets/dsavage/2.png",
+"assets/dsavage/nomistakes.png",
+"assets/dsavage/2.png",
+"assets/lybb12vy/3.png",
+"assets/lybb12vy/2.png",
+"assets/lybb12vy/1.png",
+"assets/usher/3.png",
+"assets/usher/2.png",
+"assets/usher/u1.png",
+"assets/danny/3.png",
+"assets/danny/2.png",
+"assets/danny/1.png",
+"assets/duwapkaine/6.png",
+"assets/duwapkaine/5.png",
+"assets/duwapkaine/4.png",
+"assets/duwapkaine/3.png",
+"assets/duwapkaine/2.png",
+"assets/duwapkaine/1.png",
+"assets/jaden/3.png",
+"assets/jaden/2.png",
+"assets/jaden/1.png",
+"assets/womens/12.png",
+"assets/womens/11.png",
+"assets/womens/10.png",
+"assets/womens/9.png",
+"assets/womens/8.png",
+"assets/womens/7.png",
+"assets/womens/6.png",
+"assets/womens/5.png",
+"assets/womens/4.png",
+"assets/womens/3.png",
+"assets/womens/2.png",
+"assets/womens/1.png",
+"assets/thanksgallery/9.png",
+"assets/thanksgallery/8.png",
+"assets/thanksgallery/7.png",
+"assets/thanksgallery/6.png",
+"assets/thanksgallery/5.png",
+"assets/thanksgallery/4.png",
+"assets/thanksgallery/3.png",
+"assets/thanksgallery/2.png",
+"assets/thanksgallery/1.png",
+"assets/iii/6.png",
+"assets/iii/5.png",
+"assets/iii/4.png",
+"assets/iii/3.png",
+"assets/iii/2.png",
+"assets/iii/1.png",
+"assets/youhoh/3.png",
+"assets/youhoh/2.png",
+"assets/youhoh/1.png",
+"assets/diortommy/3.png",
+"assets/diortommy/2.png",
+"assets/diortommy/1.png",
+"assets/cat/6.png",
+"assets/cat/5.png",
+"assets/cat/4.png",
+"assets/cat/3.png",
+"assets/cat/2.png",
+"assets/cat/1.png",
+"assets/floyd/white0.png",
+"assets/floyd/middle.png",
+"assets/floyd/white0.png",
+"assets/nokiadrop/right.png",
+"assets/nokiadrop/middle.png",
+"assets/nokiadrop/left.png",
+"assets/stoney/3.png",
+"assets/stoney/2.png",
+"assets/stoney/1.png",
+"assets/exponents/galllery.png",
+"assets/exponents/galltext.png",
+"assets/exponents/erytext.png",
+"assets/exponents/gallery.png",
+"assets/exponents/middle.png",
+"assets/exponents/expo.png",
+"assets/mysteryface/rightpane.png",
+"assets/mysteryface/mathsgallery.png",
+"assets/mysteryface/leftpane.png",
+"assets/migos/takeoff.png",
+"assets/migos/quavo.png",
+"assets/migos/offset.png",
+"assets/telsaapple/3.png",
+"assets/telsaapple/2.png",
+"assets/telsaapple/1.png",
+"assets/3.png",
+"assets/2.png",
+"assets/1.png",
+"assets/floyd/white0.png",
+"assets/newfriends.png",
+"assets/floyd/white0.png"
+
+];
+
+var images = document.getElementsByTagName('img');
+var counter = 0;
+function loadImage(counter) {
+  //Break out if no more images
+  if(counter==imgAddresses.length) { return; }
+
+  //Grab an image obj
+  var I = images[counter];
+
+  //Monitor load or error events, moving on to next image in either case
+  I.onload = I.onerror = function() { loadImage(counter+1); }
+
+  //Change source (then wait for event)
+  I.src = imgAddresses[counter];
+}
