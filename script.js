@@ -19,11 +19,11 @@ VIDEO.addEventListener('ended', function(){
 	}, 1500);
 });
 
-// VIDEO.addEventListener('canplay', function(){
-// 	var loading = document.getElementById('loading');
-// 	loading.classList.add('hide');
-// 	VIDEO.play();
-// });
+VIDEO.addEventListener('canplay', function(){
+	var loading = document.getElementById('loading');
+	loading.classList.add('hide');
+	VIDEO.play();
+});
 
 var bar = document.getElementsByClassName('navBar')[0];
 function checkNavBar(){
