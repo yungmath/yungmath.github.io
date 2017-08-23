@@ -10,13 +10,13 @@ else
 
 // enableInlineVideo(video);
 
-VIDEO.addEventListener('ended', function(){
-	var main = document.getElementsByClassName('main')[0];
-	GALLERY.classList.remove('none');
-	GALLERY.classList.remove('transparent');
-	GALLERY.classList.add('flex');
-	main.classList.add('hide');
-});
+// VIDEO.addEventListener('ended', function(){
+// 	var main = document.getElementsByClassName('main')[0];
+// 	GALLERY.classList.remove('none');
+// 	GALLERY.classList.remove('transparent');
+// 	GALLERY.classList.add('flex');
+// 	main.classList.add('hide');
+// });
 
 // window.addEventListener('touchstart', function(){
 // 	loadImage(0);
