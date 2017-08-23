@@ -16,7 +16,7 @@ VIDEO.addEventListener('ended', function(){
 	main.classList.add('hide');
 });
 
-VIDEO.addEventListener('canplay', function(){
+VIDEO.addEventListener('canplaythrough', function(){
 	loadImage(0);
 	var loading = document.getElementById('loading');
 	loading.classList.add('hide');
