@@ -18,26 +18,26 @@ VIDEO.addEventListener('ended', function(){
 	main.classList.add('hide');
 });
 
-window.addEventListener('touchstart', function(){
-	loadImage(0);
-	var loading = document.getElementById('loading');
-	loading.classList.add('hide');
-	VIDEO.play();
-});
-
-window.addEventListener('mousedown', function(){
-	loadImage(0);
-	var loading = document.getElementById('loading');
-	loading.classList.add('hide');
-	VIDEO.play();
-});
-
-// VIDEO.addEventListener('canplaythrough', function(){
+// window.addEventListener('touchstart', function(){
 // 	loadImage(0);
-// 	var loading = document.getElementById('loading');
-// 	loading.classList.add('hide');
+// 	// var loading = document.getElementById('loading');
+// 	// loading.classList.add('hide');
 // 	VIDEO.play();
 // });
+
+// window.addEventListener('mousedown', function(){
+// 	loadImage(0);
+// 	// var loading = document.getElementById('loading');
+// 	// loading.classList.add('hide');
+// 	VIDEO.play();
+// });
+
+VIDEO.addEventListener('canplay', function(){
+	loadImage(0);
+	// var loading = document.getElementById('loading');
+	// loading.classList.add('hide');
+	VIDEO.play();
+});
 
 /*LOAD IMAGES*/
 
