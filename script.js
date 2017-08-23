@@ -11,15 +11,12 @@ else
 enableInlineVideo(video);
 
 VIDEO.addEventListener('ended', function(){
+	loadImage(0);
 	var main = document.getElementsByClassName('main')[0];
 	GALLERY.classList.remove('none');
 	GALLERY.classList.remove('transparent');
 	GALLERY.classList.add('flex');
 	main.classList.add('hide');
-});
-
-VIDEO.addEventListener('canplay', function(){
-	loadImage(0);
 });
 
 VIDEO.addEventListener('canplaythrough', function(){
@@ -163,3 +160,4 @@ function loadImage(counter) {
   //Change source (then wait for event)
   I.src = imgAddresses[counter];
 }
+
