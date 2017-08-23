@@ -8,6 +8,8 @@ if (WIDTH>HEIGHT)
 else
 	VIDEO.style.height = HEIGHT + "px";
 
+enableInlineVideo(video);
+
 VIDEO.addEventListener('ended', function(){
 	var main = document.getElementsByClassName('main')[0];
 	GALLERY.classList.remove('none');
