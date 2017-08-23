@@ -1,5 +1,5 @@
-const VIDEO = document.getElementById('video');
-const GALLERY = document.getElementsByClassName('gallery')[0];
+var VIDEO = document.getElementById('video');
+var GALLERY = document.getElementsByClassName('gallery')[0];
 var WIDTH = window.innerWidth; 
 var HEIGHT = window.innerHeight;
 
