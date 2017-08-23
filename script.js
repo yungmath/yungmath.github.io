@@ -10,16 +10,13 @@ else
 
 VIDEO.addEventListener('ended', function(){
 	var main = document.getElementsByClassName('main')[0];
-	main.classList.add('transparent');
 	GALLERY.classList.remove('none');
 	GALLERY.classList.remove('transparent');
 	GALLERY.classList.add('flex');
-	setTimeout(function(){
-		document.body.removeChild(main);
-	}, 1500);
+	main.classList.add('hide');
 });
 
-VIDEO.addEventListener('canplaythrough', function(){
+VIDEO.addEventListener('canplay', function(){
 	loadImage(0);
 	var loading = document.getElementById('loading');
 	loading.classList.add('hide');
