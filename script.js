@@ -33,7 +33,7 @@ VIDEO.addEventListener('ended', function(){
 // });
 
 VIDEO.addEventListener('canplay', function(){
-	loadImage(0);
+	// loadImage(0);
 	// var loading = document.getElementById('loading');
 	// loading.classList.add('hide');
 	VIDEO.play();
