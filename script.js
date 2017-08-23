@@ -8,7 +8,7 @@ if (WIDTH>HEIGHT)
 else
 	VIDEO.style.height = HEIGHT + "px";
 
-enableInlineVideo(video);
+// enableInlineVideo(video);
 
 VIDEO.addEventListener('ended', function(){
 	var main = document.getElementsByClassName('main')[0];
@@ -32,12 +32,12 @@ VIDEO.addEventListener('ended', function(){
 // 	VIDEO.play();
 // });
 
-VIDEO.addEventListener('canplay', function(){
-	// loadImage(0);
-	// var loading = document.getElementById('loading');
-	// loading.classList.add('hide');
-	VIDEO.play();
-});
+// VIDEO.addEventListener('canplay', function(){
+// 	// loadImage(0);
+// 	// var loading = document.getElementById('loading');
+// 	// loading.classList.add('hide');
+// 	VIDEO.play();
+// });
 
 /*LOAD IMAGES*/
 
