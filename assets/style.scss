@@ -34,6 +34,7 @@ body{
 #purchase-button{
 	width: 20vw;
 }
+
 .main{
 	height: 100vh;
 	width: 100vw;
@@ -83,8 +84,8 @@ body{
 		margin-bottom: 20px;
 	}
 	.item{
-		width: 50vh;
-		height: 50vh;
+		width: 31vw;
+		height: 31vw;
 		overflow: hidden;
 		margin: 5px;
 		img{
@@ -191,6 +192,7 @@ body{
 
 #head{
 	justify-content: space-around;
+	flex-wrap: nowrap;
 	padding-left: 50px;
 	padding-right: 50px;
 }

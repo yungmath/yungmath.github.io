@@ -77,8 +77,8 @@ body {
     flex: 1 100%;
     margin-bottom: 20px; }
   .gallery .item {
-    width: 50vh;
-    height: 50vh;
+    width: 31vw;
+    height: 31vw;
     overflow: hidden;
     margin: 5px; }
     .gallery .item img {
@@ -158,6 +158,7 @@ body {
 
 #head {
   justify-content: space-around;
+  flex-wrap: nowrap;
   padding-left: 50px;
   padding-right: 50px; }
 
