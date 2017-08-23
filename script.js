@@ -8,36 +8,25 @@ if (WIDTH>HEIGHT)
 else
 	VIDEO.height = HEIGHT;
 
-// enableInlineVideo(video);
+enableInlineVideo(video);
 
-// VIDEO.addEventListener('ended', function(){
-// 	var main = document.getElementsByClassName('main')[0];
-// 	GALLERY.classList.remove('none');
-// 	GALLERY.classList.remove('transparent');
-// 	GALLERY.classList.add('flex');
-// 	main.classList.add('hide');
-// });
+VIDEO.addEventListener('ended', function(){
+	var main = document.getElementsByClassName('main')[0];
+	GALLERY.classList.remove('none');
+	GALLERY.classList.remove('transparent');
+	GALLERY.classList.add('flex');
+	main.classList.add('hide');
+});
 
-// window.addEventListener('touchstart', function(){
-// 	loadImage(0);
-// 	// var loading = document.getElementById('loading');
-// 	// loading.classList.add('hide');
-// 	VIDEO.play();
-// });
+VIDEO.addEventListener('canplay', function(){
+	loadImage(0);
+});
 
-// window.addEventListener('mousedown', function(){
-// 	loadImage(0);
-// 	// var loading = document.getElementById('loading');
-// 	// loading.classList.add('hide');
-// 	VIDEO.play();
-// });
-
-// VIDEO.addEventListener('canplay', function(){
-// 	// loadImage(0);
-// 	// var loading = document.getElementById('loading');
-// 	// loading.classList.add('hide');
-// 	VIDEO.play();
-// });
+VIDEO.addEventListener('canplaythrough', function(){
+	var loading = document.getElementById('loading');
+	loading.classList.add('hide');
+	VIDEO.play();
+});
 
 /*LOAD IMAGES*/
 
@@ -174,4 +163,3 @@ function loadImage(counter) {
   //Change source (then wait for event)
   I.src = imgAddresses[counter];
 }
-
