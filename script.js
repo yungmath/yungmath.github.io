@@ -3,10 +3,10 @@ const GALLERY = document.getElementsByClassName('gallery')[0];
 var WIDTH = window.innerWidth; 
 var HEIGHT = window.innerHeight;
 
-if (WIDTH>HEIGHT)
-	VIDEO.style.width = WIDTH + "px";
-else
-	VIDEO.style.height = HEIGHT + "px";
+// if (WIDTH>HEIGHT)
+// 	VIDEO.style.width = WIDTH + "px";
+// else
+// 	VIDEO.style.height = HEIGHT + "px";
 
 // enableInlineVideo(video);
 
