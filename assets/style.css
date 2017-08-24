@@ -32,12 +32,12 @@ body {
     visibility: hidden;
     opacity: 0; } }
 #purchase-button {
-  width: 20vw; }
+  width: 30vw; }
 
 .main {
   height: 100vh;
   width: 100vw;
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   transition: 1s ease; }
   .main video {
@@ -68,6 +68,7 @@ body {
   opacity: 1; }
 
 .gallery {
+  justify-content: space-around;
   transition: opacity 1s ease; }
   .gallery h1 {
     font-family: Helvetica;
@@ -77,8 +78,7 @@ body {
     flex: 1 100%;
     margin-bottom: 20px; }
   .gallery .item {
-    width: 31vw;
-    height: 31vw;
+    max-width: 30vw;
     overflow: hidden;
     margin: 5px; }
     .gallery .item img {

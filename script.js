@@ -1,12 +1,14 @@
-const VIDEO = document.getElementById('video');
-const GALLERY = document.getElementsByClassName('gallery')[0];
+var VIDEO = document.getElementById('video');
+var GALLERY = document.getElementsByClassName('gallery')[0];
 var WIDTH = window.innerWidth; 
 var HEIGHT = window.innerHeight;
 
 if (WIDTH>HEIGHT)
-	VIDEO.style.width = WIDTH + "px";
+	VIDEO.width = WIDTH;
 else
-	VIDEO.style.height = HEIGHT + "px";
+	VIDEO.height = HEIGHT;
+
+enableInlineVideo(video);
 
 VIDEO.addEventListener('ended', function(){
 	var main = document.getElementsByClassName('main')[0];
@@ -17,7 +19,6 @@ VIDEO.addEventListener('ended', function(){
 });
 
 VIDEO.addEventListener('canplaythrough', function(){
-	loadImage(0);
 	var loading = document.getElementById('loading');
 	loading.classList.add('hide');
 	VIDEO.play();
@@ -26,7 +27,15 @@ VIDEO.addEventListener('canplaythrough', function(){
 /*LOAD IMAGES*/
 
 var imgAddresses = [
-
+"assets/cover/1.png",
+"assets/cover/8.png",
+"assets/cover/1.png",
+"assets/cover/6.png",
+"assets/cover/5.png",
+"assets/cover/4.png",
+"assets/cover/1.png",
+"assets/cover/2.png",
+"assets/cover/1.png",
 "assets/3covers/3.png",
 "assets/3covers/2.png",
 "assets/3covers/1.png",
@@ -151,3 +160,4 @@ function loadImage(counter) {
   I.src = imgAddresses[counter];
 }
 
+loadImage(0);
