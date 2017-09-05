@@ -32,7 +32,7 @@ body{
 }
 
 #purchase-button{
-	width: 30vw;
+	height: 4vh;
 }
 
 .main{
@@ -76,14 +76,6 @@ body{
 .gallery{
 	justify-content: space-around;
 	transition: opacity 1s ease;
-	h1{
-		font-family: Helvetica;
-		font-weight: bold;
-		font-size: 5em;
-		text-align: center;
-		flex: 1 100%;
-		margin-bottom: 20px;
-	}
 	.item{
 		max-width: 30vw;
 		overflow: hidden;
@@ -127,9 +119,10 @@ body{
 .link{
 	a{
 		font-family: Helvetica, sans-serif;
-		font-size: 5vh;
+		font-size: 4vh;
 		color: black;
 		transition: .3s ease;
+		font-weight: bold;
 		text-decoration: none;
 	}
 	a:hover{
@@ -208,4 +201,20 @@ body{
 	flex-wrap: nowrap;
 	padding-left: 50px;
 	padding-right: 50px;
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 5em;
+	text-align: center;
+	display: flex;
+	margin-bottom: 20px;
+
+}
+
+.purchase, .ig{
+	margin: auto;
+	text-align: center;
+}
+
+.purchase{
+	margin-bottom: 3vh;
 }
