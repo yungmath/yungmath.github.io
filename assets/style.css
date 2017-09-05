@@ -110,6 +110,15 @@ body {
     .navBar li a:hover {
       color: gray; }
 
+.link a {
+  font-family: Helvetica, sans-serif;
+  font-size: 5vh;
+  color: black;
+  transition: .3s ease;
+  text-decoration: none; }
+.link a:hover {
+  color: gray; }
+
 .links {
   flex: 1 100%;
   text-align: center;

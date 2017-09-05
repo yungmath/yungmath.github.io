@@ -124,6 +124,19 @@ body{
 	}
 }
 
+.link{
+	a{
+		font-family: Helvetica, sans-serif;
+		font-size: 5vh;
+		color: black;
+		transition: .3s ease;
+		text-decoration: none;
+	}
+	a:hover{
+		color: gray;
+	}
+}
+
 .links{
 	li{
 		a{
