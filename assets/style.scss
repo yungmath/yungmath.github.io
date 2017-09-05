@@ -32,7 +32,8 @@ body{
 }
 
 #purchase-button{
-	height: 4vh;
+	height: 3vw;
+	transition: all .3s ease;
 }
 
 .main{
@@ -119,7 +120,7 @@ body{
 .link{
 	a{
 		font-family: Helvetica, sans-serif;
-		font-size: 4vh;
+		font-size: 3vw;
 		color: black;
 		transition: .3s ease;
 		font-weight: bold;
@@ -206,7 +207,8 @@ body{
 	font-size: 5em;
 	text-align: center;
 	display: flex;
-	margin-bottom: 20px;
+	margin-bottom: 5vh;
+	margin-top: 2vh;
 
 }
 
@@ -216,5 +218,5 @@ body{
 }
 
 .purchase{
-	margin-bottom: 3vh;
+	margin-bottom: 1vh;
 }
