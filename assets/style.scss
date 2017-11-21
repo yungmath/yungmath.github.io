@@ -9,6 +9,7 @@ body{
 	width: 100vw;
 	position: absolute;
 	z-index: 5000;
+	top: 0;
 }
 
 .loadMessage{
@@ -50,6 +51,7 @@ body{
 		transform: translate(-50%, -50%);
 	}
 	transition: 1s ease;
+	top: 0;
 }
 
 .transparent{
